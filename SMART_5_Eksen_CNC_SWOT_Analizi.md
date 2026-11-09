@@ -33,40 +33,39 @@ En kritik konu yalnızca bilgisayarı korumak değildir; **program, parametre ve
 
 ## 3. SWOT
 
+**Etiketler:** **[K]** = üretici/haber kaynağında yazıyor · **[Ç]** = kaynaktaki bir özellikten mantıksal çıkarım · **[V]** = varsayım, saha doğrulaması gerekli. Makine ve üretici hakkında kaynağı olmayan bir iddia yazılmamıştır.
+
 ### S — Güçlü yönler (Strengths)
-1. **Çok fonksiyonlu tek gövde:** Tornalama, şekillendirme, frezeleme ve zımparalama tek makinede; parça aktarımı ve el işçiliği azalır.
-2. **5 eksen ve yatan freze kafası:** Karmaşık mobilya ayak formları tek bağlamada işlenebilir.
-3. **Otomatik takım değişimi:** Operatörün takıma elle müdahalesi azalır (tehlike maruziyeti düşer).
-4. **Yerli üretim ve ödüllü tasarım:** DREMA altın madalyası; üreticiye erişim ve servis kolaylığı.
-5. **CNC kontrolü:** Tekrarlanabilir kalite, programlanabilir üretim; dijital iz sürme olanağı.
-6. **Eğitim çıktısının gücü:** Risk analizi, tehlikeyi insana verilen zarar üzerinden ele alıyor (föyler LAB 1–7).
+1. **Çok fonksiyonlu tek gövde [K]:** Şekillendirme, tornalama, detaylı frezeleme ve zımparalama tek makinede.
+2. **5 eksen ve ±90° yatan freze kafası [K]:** Detaylı frezeleme, delik, geçme yuvası ve oyma işleri yapılabilir.
+3. **Otomatik takım değişimi, 5 pozisyonlu magazin [K]:** Takım değişimi için elle müdahale ihtiyacı azalır; bu, tehlike maruziyetini düşürebilir [Ç].
+4. **Ödüllü tasarım [K]:** DREMA fuarında yenilik altın madalyası.
+5. **CNC ile programlanabilir üretim [Ç]:** Tekrarlanabilir işleme; kontrol türü bilinmediği için ayrıntı [V].
 
 ### W — Zayıf yönler (Weaknesses)
-1. **Şeffaflık eksikliği:** Kontrol sistemi, Safety PLC/STO, ışık perdesi, yazılım ve SBOM bilgisi yayımlanmamış; doğrulanamayan emniyet iddiaları var.
-2. **Yüksek tehlike yoğunluğu:** Dönen iş parçası, 7,5 kW kesici ve hareketli kafa aynı hacimde; fırlayan parça ve temas riski.
-3. **Uzaktan bakım ve program aktarımı için tanımlı güvenli süreç görünmüyor** (USB/ağ ile NC aktarımı varsayımı; saha doğrulaması gerekli).
-4. **Küçük/orta ölçekli üretici:** Siber güvenlik (62443, CRA) ve güvenlik açığı yönetimi için ayrılmış kaynak sınırlı olabilir.
-5. **Toz yönetimi:** Ahşap tozu birikimi yanıcı ortam oluşturabilir; emiş sistemi arızası kritik.
-6. **Yazılım ömrü:** Kontrol PC'si işletim sistemi ve bileşen yamalarının uzun vadeli desteği belirsiz.
+1. **Teknik şeffaflık eksikliği [K]:** Kontrol sistemi, emniyet donanımı (Safety PLC, STO, ışık perdesi), yazılım ve SBOM bilgisi kaynaklarda yer almıyor; bu yüzden emniyet ve siber güvenlik durumu doğrulanamıyor.
+2. **Yüksek tehlike yoğunluğu [Ç]:** Dönen iş parçası, 7,5 kW kesici (Ø120 mm) ve hareketli freze kafası bir arada; temas ve fırlayan parça riski.
+3. **Karmaşık çalışma yapısı [Ç]:** Birden fazla ünite (şekillendirme, torna, frezeleme, zımpara) bakım ve emniyet doğrulamasını zorlaştırır.
+4. **Program aktarımı ve uzaktan bakım süreci belirsiz [V]:** USB/ağ ile NC aktarımı ve uzak erişim olup olmadığı kaynaklarda yok.
+5. **Toz yönetimi [V]:** Ahşap işlendiği için toz oluşur [Ç]; makinede emiş sisteminin nasıl kurulduğu bilinmiyor.
 
 ### O — Fırsatlar (Opportunities)
-1. **AB Makine Tüzüğü 2023/1230 ve CRA:** Uygunluk, ihracatta rekabet avantajı sağlar; "güvenli by design" bir satış argümanıdır.
-2. **Güvenli uzaktan servis:** Jump server + VPN + MFA ile uzaktan teşhis, servis maliyetini ve duruş süresini azaltır.
-3. **SBOM ve yama yönetimi:** Müşteriye şeffaf bileşen listesi güven yaratır.
-4. **Tahminsel bakım ve veri analitiği:** İş mili ve takım aşınması izlenerek plansız duruş azaltılabilir.
-5. **YZ destekli kalite kontrol:** Kamera ile yüzey kusuru tespiti; doğru fail-safe mimarisiyle verim artar.
-6. **Mobilya sektörünün otomasyon talebi:** Nitelikli usta eksikliği 5 eksen otomasyona talebi artırıyor.
-7. **Eğitim ve belgelendirme:** IEC 62443 / 62061 / ISO 13849 uyumlu ürün sertifikasyonu.
+1. **AB Makine Tüzüğü 2023/1230 ve CRA [Ç]:** Dijital bileşen içeren makineler için emniyet ve siber güvenlik gereksinimlerini karşılamak ürün güvenini artırabilir; makinenin AB'ye satılıp satılmadığı bilinmiyor [V].
+2. **Güvenli uzaktan servis [V]:** Uzak erişim varsa jump server + VPN + MFA ile güvenli hâle getirilebilir (LAB 2, LAB 4).
+3. **SBOM yayımlama [Ç]:** Bileşen listesinin paylaşılması şeffaflığı artırır (LAB 5).
+4. **Veri toplama ve izleme [V]:** Kontrol sistemi veri sağlıyorsa iş mili/takım aşınması izlenebilir.
+5. **YZ destekli kalite kontrol [V]:** Makinede YZ olduğu belirtilmemiştir; eklenirse fail-safe mimarisi gerekir (LAB 7).
+6. **Standartlara uyum [Ç]:** IEC 62443, ISO 13849 ve IEC 62061 temelli doğrulama yol haritası sunar.
 
 ### T — Tehditler (Threats)
-1. **Çalınmış servis hesabı / yetkisiz uzaktan erişim:** Emniyet parametrelerinin değiştirilmesi, fiziksel yaralanma (LAB 3 – R1, Kritik).
-2. **USB ve değiştirilmiş NC programı:** Beklenmedik hareket, takım kırılması, parça fırlaması (R2).
-3. **Fidye yazılımı:** CAD-CAM ve program arşivi şifrelenir, üretim durur (R5).
-4. **Toz patlaması/yangını:** Emiş arızası veya devre dışı bırakılması (R4; S=3, öne alınır).
-5. **Yasal yükümlülükler:** CRA bildirim süreleri (24 s / 72 s / 14 gün), CE ve makine tüzüğü; uyumsuzlukta satış ve cezai risk.
-6. **Bilinen açıklar (CVE):** Üçüncü taraf bileşenlerdeki kritik açıkların yamalanamaması (LAB 5).
-7. **Rakip üreticiler ve ithal makineler:** Siber güvenlik ve emniyet belgelerini öne çıkaran rakipler.
-8. **YZ girdi manipülasyonu:** Sahte/bozuk kamera verisiyle yanlış kabul (LAB 7).
+*Aşağıdaki tehditler LAB 3 risk kaydındaki varsayımsal senaryolardır; gerçekleşmiş olay değildir.*
+1. **Çalınmış servis hesabı / yetkisiz uzaktan erişim [V]:** Emniyet parametrelerinin değiştirilmesi, fiziksel yaralanma (LAB 3 – R1, Kritik).
+2. **USB ve değiştirilmiş NC programı [V]:** Beklenmedik hareket, takım kırılması, parça fırlaması (R2).
+3. **Fidye yazılımı [V]:** Program arşivinin şifrelenmesi, üretimin durması (R5).
+4. **Toz yangını/patlaması [Ç]:** Ahşap tozu yanıcıdır; emiş arızasında birikim riski (R4; S=3, öne alınır).
+5. **Yasal yükümlülükler [Ç]:** CRA bildirim süreleri (24 s / 72 s / 14 gün) ve makine tüzüğü uyumsuzluğu satış ve hukuki risk doğurabilir.
+6. **Bilinen açıklar (CVE) [V]:** Üçüncü taraf bileşenlerde yamalanamayan açıklar (LAB 5).
+7. **YZ girdi manipülasyonu [V]:** Yalnızca YZ eklenirse geçerli (LAB 7).
 
 ---
 
@@ -74,7 +73,7 @@ En kritik konu yalnızca bilgisayarı korumak değildir; **program, parametre ve
 
 | | **Fırsatlar (O)** | **Tehditler (T)** |
 |---|---|---|
-| **Güçlü (S)** | Otomasyon ve ödüllü tasarımı CRA/62443 uyumuyla birleştirip ihracatta öne çık | Takım değişimi ve kapalı hücre ile maruziyeti azalt; emniyeti kontrol yolundan ayır |
+| **Güçlü (S)** | Çok fonksiyonlu yapıyı CRA/62443 uyumuyla birleştirip ürün güvenini artır | Otomatik takım değişimiyle maruziyeti azalt; emniyeti kontrol yolundan ayır |
 | **Zayıf (W)** | Güvenli uzaktan servis ve SBOM yayımlayarak şeffaflık açığını kapat | Safety donanımını doğrula, USB/aktarım sürecini kontrol altına al, olay müdahale planı hazırla |
 
 ## 5. Öncelikli öneriler

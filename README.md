@@ -27,3 +27,5 @@ Bu depo, Dinçmak'ın **SMART (TORMAT.SMART)** 5 eksen CNC işleme merkezi ve ah
 ## Önemli not
 
 Üreticinin yayımladığı bilgilerde **kontrol sistemi, emniyet donanımı (ışık perdesi, Safety PLC, STO), uzaktan erişim ve yazılım sürümleri belirtilmemiştir**. Bu bilgiler föylerde **varsayım** olarak işaretlenmiş ve "saha doğrulaması gerekli" notu taşır. Bu çalışma eğitim amaçlıdır; resmî denetim, penetrasyon testi veya CE/mevzuat uygunluk belgesi değildir.
+
+SWOT analizinde her madde **[K]** kaynakta yazıyor, **[Ç]** kaynaktan çıkarım, **[V]** varsayım (saha doğrulaması gerekli) olarak etiketlenmiştir. Lab föylerindeki makineye özgü emniyet/ağ/yazılım ayrıntıları da varsayımdır ve föy başlarında belirtilmiştir.
